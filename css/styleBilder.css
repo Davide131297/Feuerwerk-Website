@@ -166,4 +166,14 @@ body {
         width: 100%;
         height: auto;
     }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer p:last-child {
+        text-align: center;
+        margin-right: 0;
+    }
 }
