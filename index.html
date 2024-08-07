@@ -193,13 +193,56 @@
         .footer a:hover {
             text-decoration: underline;
         }
+
+        .nav-link.active {
+            color: #4CAF50 !important; /* Farbe des aktiven Links auf Grün */
+        }
+
+        .card {
+            max-width: 700px;
+            height: 250px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+        }
+        .card img {
+            width: 40%;
+            object-fit: cover;
+            margin: 15px 0px 15px 15px;
+        }
+        .card-body {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .divider {
+            width: 1px;
+            background-color: #ddd;
+            margin: 15px 10px;
+        }
+
+        .card-img-top {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
     </style>
 </head>
 <body>
     <div>
         <nav class="navbar navbar-expand-md bg-dark border-bottom border-body" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Möckmühler Feuerwerke</a>
+                <a class="navbar-brand" href="index.html">Möckmühler Feuerwerke</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -222,45 +265,60 @@
             </div>
         </nav>
     </div>
+
     <div class="header-container">
         <video src="img/feuerwerk1.mp4" class="header-video" autoplay muted loop>
             Ihr Browser unterstützt das Video-Tag nicht.
         </video>
         <div class="header-text">Feuerwerke direkt vom Profi für ihr Fest!</div>
     </div>
+
     <div class="services-section">
         <h2 class="services-title">Unsere Leistungen</h2>
-        <div class="services-container">
-            <div class="service-box">
-                <img src="img/wedding.jpg" alt="Hochzeits-Feuerwerk">
-                <div class="service-box-content">
-                    <h3>Hochzeits-Feuerwerk</h3>
-                    <p>Hochzeitsfeuerwerke schaffen unvergessliche, romantische Momente für Ihren besonderen Tag.</p>
+        <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="img/wedding.jpg" class="card-img-top" alt="Hochzeits-Feuerwerk">
+                    <div class="divider"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Hochzeits-Feuerwerk</h5>
+                        <p class="card-text">Hochzeitsfeuerwerke schaffen unvergessliche, romantische Momente für Ihren besonderen Tag.</p>
+                    </div>
                 </div>
             </div>
-            <div class="service-box">
-                <img src="img/bday.jpg" alt="Geburtstags-Feuerwerk">
-                <div class="service-box-content">
-                    <h3>Geburtstags-Feuerwerk</h3>
-                    <p>Geburtstagsfeuerwerke sorgen für ein funkelndes Highlight und machen Ihren Ehrentag unvergesslich.</p>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="img/bday.jpg" class="card-img-top" alt="Geburtstags-Feuerwerk">
+                    <div class="divider"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Geburtstags-Feuerwerk</h5>
+                        <p class="card-text">Geburtstagsfeuerwerke sorgen für ein funkelndes Highlight und machen Ihren Ehrentag unvergesslich.</p>
+                    </div>
                 </div>
             </div>
-            <div class="service-box">
-                <img src="img/specialeffects.jpg" alt="Special-Effects">
-                <div class="service-box-content">
-                    <h3>Special-Effects</h3>
-                    <p>Beeindruckende Pyrotechnik für Foto- und Videoaufnahmen, die Ihre Erinnerungen einzigartig macht.</p>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="img/specialeffects.jpg" class="card-img-top" alt="Special-Effects">
+                    <div class="divider"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special-Effects</h5>
+                        <p class="card-text">Beeindruckende Pyrotechnik für Foto- und Videoaufnahmen, die Ihre Erinnerungen einzigartig macht.</p>
+                    </div>
                 </div>
             </div>
-            <div class="service-box">
-                <img src="img/sonder.jpg" alt="Sonstige Anlässe">
-                <div class="service-box-content">
-                    <h3>Sonstige Anlässe</h3>
-                    <p>Für besondere Anlässe bieten wir maßgeschneiderte Feuerwerke, die Ihre Feier unvergesslich machen. Kontaktieren Sie uns für individuelle Lösungen.</p>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="img/sonder.jpg" class="card-img-top" alt="Sonstige Anlässe">
+                    <div class="divider"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Sonstige Anlässe</h5>
+                        <p class="card-text">Für besondere Anlässe bieten wir maßgeschneiderte Feuerwerke, die Ihre Feier unvergesslich machen. Kontaktieren Sie uns für individuelle Lösungen.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="why-us-section">
         <h2 class="why-us-title">Wieso wir?</h2>
         <div class="why-us-content">
