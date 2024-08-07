@@ -170,7 +170,6 @@
             font-weight: bold;
             font-size: 20px;
             transition: 0.6s ease;
-            user-select: none;
         }
 
         .prev {
@@ -229,54 +228,47 @@
     </div>
     <div class="gallery-section">
         <h2 class="gallery-title">Einblicke hinter die Kulissen, :)</h2>
+
         <div class="gallery-container">
-            <div class="gallery-item" onclick="openLightbox();currentSlide(1)">
-                <img src="img/bday.jpg" alt="Feuerwerk 1">
+            <div class="gallery-item">
+                <img src="img/bday.jpg" alt="Feuerwerk 1" class="lightbox-trigger">
             </div>
-            <div class="gallery-item" onclick="openLightbox();currentSlide(2)">
-                <img src="img/bday.jpg" alt="Feuerwerk 2">
+            <div class="gallery-item">
+                <img src="img/bday.jpg" alt="Feuerwerk 2" class="lightbox-trigger">
             </div>
-            <div class="gallery-item" onclick="openLightbox();currentSlide(3)">
-                <video controls controlsList="nodownload" poster="img/video1_poster.jpg">
+            <div class="gallery-item">
+                <video controls controlsList="nodownload" poster="img/video1_poster.jpg" class="lightbox-trigger">
                     <source src="img/feuerwerk1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <div class="gallery-item" onclick="openLightbox();currentSlide(4)">
-                <video controls controlsList="nodownload" poster="img/video2_poster.jpg">
+            <div class="gallery-item">
+                <video controls controlsList="nodownload" poster="img/video2_poster.jpg" class="lightbox-trigger">
                     <source src="img/feuerwerk1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
         </div>
     </div>
-    <div class="footer">
-        <p>&copy; 2024 möckmühler-feuerwerke.de Alle Rechte vorbehalten.</p>
-        <p>
-            <a href="#impressum">Impressum</a> | 
-            <a href="#datenschutz">Datenschutz</a> 
-        </p>
-    </div>
 
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox">
+    <div class="lightbox" id="lightbox">
         <span class="close" onclick="closeLightbox()">&times;</span>
         <div class="lightbox-content">
             <div class="mySlides">
-                <img src="img/firework1.jpg" alt="Feuerwerk 1">
+                <img src="img/bday.jpg" alt="Feuerwerk 1">
             </div>
             <div class="mySlides">
-                <img src="img/firework2.jpg" alt="Feuerwerk 2">
+                <img src="img/bday.jpg" alt="Feuerwerk 2">
             </div>
             <div class="mySlides">
-                <video controls controlsList="nodownload">
-                    <source src="videos/firework1.mp4" type="video/mp4">
+                <video controls controlsList="nodownload" poster="img/video1_poster.jpg" autoplay>
+                    <source src="img/feuerwerk1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="mySlides">
-                <video controls controlsList="nodownload">
-                    <source src="videos/firework2.mp4" type="video/mp4">
+                <video controls controlsList="nodownload" poster="img/video2_poster.jpg" autoplay>
+                    <source src="img/feuerwerk1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -285,17 +277,24 @@
         </div>
     </div>
 
+    <div class="footer">
+        <p>&copy; 2024 möckmühler-feuerwerke.de Alle Rechte vorbehalten.</p>
+        <p>
+            <a href="#impressum">Impressum</a> | 
+            <a href="#datenschutz">Datenschutz</a> 
+        </p>
+    </div>
+
     <script>
-        let slideIndex = 1;
+        var slideIndex = 1;
 
         function openLightbox() {
             document.getElementById('lightbox').style.display = 'flex';
-            document.addEventListener('keydown', closeOnEsc);
+            showSlides(slideIndex);
         }
 
         function closeLightbox() {
             document.getElementById('lightbox').style.display = 'none';
-            document.removeEventListener('keydown', closeOnEsc);
         }
 
         function plusSlides(n) {
@@ -307,23 +306,24 @@
         }
 
         function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName('mySlides');
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
             if (n > slides.length) {slideIndex = 1}
             if (n < 1) {slideIndex = slides.length}
             for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';
+                slides[i].style.display = "none";
             }
-            slides[slideIndex - 1].style.display = 'block';
+            slides[slideIndex-1].style.display = "block";
         }
 
-        function closeOnEsc(event) {
-            if (event.key === 'Escape') {
-                closeLightbox();
-            }
+        // Event listeners for lightbox triggers
+        var lightboxTriggers = document.getElementsByClassName('lightbox-trigger');
+        for (var i = 0; i < lightboxTriggers.length; i++) {
+            lightboxTriggers[i].addEventListener('click', function() {
+                openLightbox();
+                currentSlide(Array.prototype.indexOf.call(lightboxTriggers, this) + 1);
+            });
         }
-
-        showSlides(slideIndex);
     </script>
 </body>
 </html>
