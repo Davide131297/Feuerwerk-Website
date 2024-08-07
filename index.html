@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Möckmühler Feuerwerke</title>
+    <style>
+        body {
+            margin: 0; /* Standardmargen des Body-Elements entfernen */
+            font-family: Arial, sans-serif;
+        }
+
+        .topnav {
+            display: flex;
+            justify-content: center; /* Center the container */
+            align-items: center; /* Vertikale Ausrichtung */
+            background-color: #333;
+            position: relative;
+            padding: 0 33.6px; /* Innenabstand für die Navbar um 60% vergrößern */
+            height: 80px; /* Höhe der Navbar um 60% vergrößern */
+        }
+
+        .topnav .links {
+            margin-left: auto; /* Move the links container to the right */
+            margin-right: 2cm; /* Add 2cm space from the right edge */
+            display: flex;
+            gap: 10px; /* Abstand zwischen den Links unverändert lassen */
+        }
+
+        .topnav a {
+            padding: 14px 20px; /* Padding der Links unverändert lassen */
+            text-decoration: none;
+            color: white;
+        }
+
+        .topnav a:hover {
+            background-color: #4CAF50; /* Hintergrundfarbe beim Hover */
+        }
+
+        .topnav a.active {
+            background-color: transparent; /* Keine Hintergrundfarbe für aktiven Link */
+        }
+
+        .topnav a.active:hover {
+            background-color: #4CAF50; /* Hintergrundfarbe beim Hover für aktiven Link */
+        }
+
+        .topnav .title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 24px; /* Schriftgröße unverändert lassen */
+            font-weight: bold;
+        }
+
+        .header-container {
+            position: relative;
+            width: 100%;
+            height: 20cm; /* Höhe des Containers auf 20 cm setzen */
+        }
+
+        .header-video {
+            width: 100%;
+            height: calc(100vh - 80px) /* Höhe des Bildes auf 100% des Containers setzen */;
+            object-fit: cover; /* Bild entsprechend zuschneiden, um den Container zu füllen */
+        }
+
+        .header-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .services-section {
+            padding: 30px;
+            padding-bottom: 80px; /* Abstand vom Ende der letzten Kachel zum unteren Rand vergrößern */
+            background-color: #f4f4f4;
+        }
+
+        .services-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-box {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 45%;
+            margin: 15px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .service-box img {
+            width: 40%;
+            height: auto;
+            border-right: 1px solid #ddd;
+            padding-right: 15px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .service-box-content {
+            padding-left: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 60%;
+        }
+
+        .service-box h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .service-box p {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .why-us-section {
+            padding: 30px;
+            background-color: #fff;
+        }
+
+        .why-us-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .why-us-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .process-section {
+            padding: 30px;
+            background-color: #e2e2e2;
+        }
+
+        .process-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .process-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <div class="title">Möckmühler Feuerwerke</div>
+        <div class="links">
+            <a class="active" href="#home">Home</a>
+            <a href="bilder.html">Bilder</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="übermich.html">Über Mich</a>
+        </div>
+    </div>
+    <div class="header-container">
+        <video src="img/feuerwerk1.mp4" class="header-video" autoplay muted loop>
+            Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
+        <div class="header-text">Feuerwerke direkt vom Profi für ihr Fest!</div>
+    </div>
+    <div class="services-section">
+        <h2 class="services-title">Unsere Leistungen</h2>
+        <div class="services-container">
+            <div class="service-box">
+                <img src="img/wedding.jpg" alt="Hochzeits-Feuerwerk">
+                <div class="service-box-content">
+                    <h3>Hochzeits-Feuerwerk</h3>
+                    <p>Hochzeitsfeuerwerke schaffen unvergessliche, romantische Momente für Ihren besonderen Tag.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="img/bday.jpg" alt="Geburtstags-Feuerwerk">
+                <div class="service-box-content">
+                    <h3>Geburtstags-Feuerwerk</h3>
+                    <p>Geburtstagsfeuerwerke sorgen für ein funkelndes Highlight und machen Ihren Ehrentag unvergesslich.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="img/specialeffects.jpg" alt="Special-Effects">
+                <div class="service-box-content">
+                    <h3>Special-Effects</h3>
+                    <p>Beeindruckende Pyrotechnik für Foto- und Videoaufnahmen, die Ihre Erinnerungen einzigartig macht.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="img/sonder.jpg" alt="Sonstige Anlässe">
+                <div class="service-box-content">
+                    <h3>Sonstige Anlässe</h3>
+                    <p>Für besondere Anlässe bieten wir maßgeschneiderte Feuerwerke, die Ihre Feier unvergesslich machen. Kontaktieren Sie uns für individuelle Lösungen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="why-us-section">
+        <h2 class="why-us-title">Wieso wir?</h2>
+        <div class="why-us-content">
+            <p>Placeholder text: Warum sollten Sie Ihr Feuerwerk bei uns machen lassen? Wir bieten Ihnen eine einzigartige Kombination aus Erfahrung, Qualität und Kundenservice. Unsere Feuerwerke sind individuell auf Ihre Wünsche zugeschnitten und bieten ein unvergessliches Erlebnis für Sie und Ihre Gäste.</p>
+            <p>Placeholder text: Unser Team besteht aus erfahrenen Pyrotechnikern, die mit Leidenschaft und Hingabe arbeiten, um sicherzustellen, dass Ihr Event spektakulär und sicher ist. Wir verwenden nur hochwertige Materialien und die neuesten Technologien, um beeindruckende und sichere Feuerwerke zu gewährleisten.</p>
+            <p>Placeholder text: Mit jahrelanger Erfahrung in der Branche und einer langen Liste zufriedener Kunden können Sie sich darauf verlassen, dass wir Ihr Feuerwerk professionell und zuverlässig durchführen. Wir kümmern uns um alle notwendigen Genehmigungen und planen jedes Detail, damit Sie sich entspannt zurücklehnen und das Spektakel genießen können.</p>
+        </div>
+    </div>
+    <div class="process-section">
+        <h2 class="process-title">So beauftragen Sie ein Feuerwerk</h2>
+        <div class="process-content">
+            <p>Der Ablauf für die Beauftragung eines Feuerwerks bei uns ist einfach und unkompliziert:</p>
+            <ol>
+                <li><strong>Kontaktaufnahme:</strong> Sie kontaktieren uns per Telefon oder E-Mail und teilen uns Ihre Wünsche und Vorstellungen mit.</li>
+                <li><strong>Beratungsgespräch:</strong> In einem persönlichen Beratungsgespräch klären wir alle Details und erstellen ein individuelles Konzept für Ihr Feuerwerk.</li>
+                <li><strong>Angebot:</strong> Auf Basis des Beratungsgesprächs erhalten Sie ein maßgeschneidertes Angebot.</li>
+                <li><strong>Planung und Genehmigung:</strong> Nach Ihrer Auftragserteilung kümmern wir uns um die Planung und alle notwendigen Genehmigungen.</li>
+                <li><strong>Durchführung:</strong> Am Tag der Veranstaltung bauen wir das Feuerwerk auf und führen es professionell durch.</li>
+                <li><strong>Nachbereitung:</strong> Nach dem Feuerwerk sorgen wir für den Abbau und die Reinigung des Abbrennplatzes.</li>
+            </ol>
+            <p><a href="kontakt.html">Kontaktieren</a> Sie uns noch heute, um Ihr unvergessliches Feuerwerk zu planen!</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 möckmühler-feuerwerke.de Alle Rechte vorbehalten.</p>
+        <p>
+            <a href="#impressum">Impressum</a> | 
+            <a href="#datenschutz">Datenschutz</a> 
+           </p>
+    </div>
+</body>
+</html>
