@@ -6,6 +6,19 @@ body {
     min-height: 100vh;
 }
 
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 .gallery-section {
     padding: 50px;
     background-color: #f4f4f4;
@@ -146,6 +159,12 @@ body {
 }
 
 @media (max-width: 768px) {
+
+    .navbar-brand {
+        position: static;
+        transform: none;
+    }
+
     .gallery-container {
         grid-template-columns: repeat(2, 1fr);
     }
