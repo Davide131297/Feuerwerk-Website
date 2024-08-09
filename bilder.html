@@ -100,6 +100,7 @@
         function openLightbox() {
             document.getElementById('lightbox').style.display = 'flex';
             showSlides(slideIndex);
+            pauseGalleryVideos(); //Stoppt alle Videos in der Galerie
         }
 
         function closeLightbox() {
@@ -123,6 +124,13 @@
                 slides[i].style.display = "none";
             }
             slides[slideIndex-1].style.display = "block";
+        }
+
+        function pauseGalleryVideos() {
+            var videos = document.querySelectorAll('.gallery-section video');
+            videos.forEach(function(video) {
+                video.pause();
+            });
         }
 
         // Event listeners for lightbox triggers
