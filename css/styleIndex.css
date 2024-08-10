@@ -17,6 +17,10 @@ body {
     transform: translateX(-50%);
 }
 
+.navbar-nav {
+    padding-right: 25px;
+}
+
 .nav-link.active {
     color: #4CAF50 !important;
 }
@@ -298,6 +302,10 @@ body {
         position: static;
         transform: none;
     }
+
+    .navbar-nav {
+        padding-right: 0px;
+    }    
     
     .card-title {
         font-size: 20px;
@@ -328,5 +336,11 @@ body {
     .why-us-container {
         flex-direction: column; /* Bild und Text untereinander anordnen */
         align-items: flex-start; /* Linksbündig ausrichten */
+    }
+}
+
+@media screen and (min-width: 768) {
+    .navbar {
+        height: 70px;
     }
 }
