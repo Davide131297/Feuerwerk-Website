@@ -22,6 +22,24 @@ body {
 .card {
     width: 30rem;
     height: 30rem;
+    background-color: rgba(0, 0, 0, 0.2); /* Schwarz mit 20% Sichtbarkeit */
+    border: 2px solid red; /* Anfangsfarbe der Border */
+    animation: borderColorChange 3s linear infinite;
+}
+
+@keyframes borderColorChange {
+    0% {
+        border-color: red;
+    }
+    33% {
+        border-color: blue;
+    }
+    66% {
+        border-color: yellow;
+    }
+    100% {
+        border-color: white;
+    }
 }
 
 .contact-section {
@@ -42,12 +60,28 @@ body {
     font-size: 36px;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #333;
+    color: white;
+    animation: colorChange 3s linear infinite;
+}
+@keyframes colorChange {
+    0% {
+        color: red;
+    }
+    33% {
+        color: blue;
+    }
+    66% {
+        color: yellow;
+    }
+    100% {
+        color: white;
+    }
 }
 
 .contact-info {
     font-size: 18px;
     line-height: 1.5; /* Adjust line height for better readability */
+    color: white;
 }
 
 .contact-info p {
