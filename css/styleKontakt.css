@@ -19,27 +19,35 @@ body {
     transform: translateX(-50%);
 }
 
+.card {
+    width: 30rem;
+    height: 30rem;
+}
 
 .contact-section {
     padding: 50px;
-    background-color: white;
+    background-image: url('../img/FeuerwerkHintergrundBild.jpg'); /* Hintergrundbild hinzufügen */
+    background-size: cover; /* Bild skalieren, um den gesamten Bereich abzudecken */
+    background-position: center; /* Bild zentrieren */
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center content vertically */
-    text-align: center; /* Center text */
+    justify-content: center; /* Inhalt vertikal zentrieren */
+    text-align: center; /* Text zentrieren */
+    color: white; /* Optional: Textfarbe anpassen, damit sie auf dem Hintergrundbild gut lesbar ist */
 }
 
 .contact-title {
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     color: #333;
 }
 
 .contact-info {
     font-size: 18px;
-    line-height: 1.6; /* Adjust line height for better readability */
+    line-height: 1.5; /* Adjust line height for better readability */
 }
 
 .contact-info p {
