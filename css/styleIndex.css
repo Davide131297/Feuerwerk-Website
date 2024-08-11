@@ -43,6 +43,11 @@ body {
     animation: navlinkColorChange 2s linear forwards;
 }
 
+.icon {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
 /* Header Section */
 .header-video {
     width: 100%;
