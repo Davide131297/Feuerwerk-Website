@@ -337,6 +337,10 @@ body {
         flex-direction: column; /* Bild und Text untereinander anordnen */
         align-items: flex-start; /* Linksbündig ausrichten */
     }
+
+    .process-image {
+        display: none; /* Bild ausblenden */
+    }
 }
 
 @media screen and (min-width: 768) {
