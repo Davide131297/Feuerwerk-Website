@@ -19,6 +19,28 @@ body {
     transform: translateX(-50%);
 }
 
+@keyframes navlinkColorChange {
+    0% {
+        color: #4CAF50;
+    }
+    25% {
+        color: blue;
+    }
+    33% {
+        color: red;
+    }
+    66% {
+        color: yellow;
+    }
+    100% {
+        color: #4CAF50;
+    }
+}
+
+.nav-link.active {
+    animation: navlinkColorChange 2s linear forwards;
+}
+
 .card {
     width: 30rem;
     height: 30rem;
@@ -119,10 +141,6 @@ body {
 
 .footer a:hover {
     text-decoration: underline;
-}
-
-.nav-link.active {
-    color: #4CAF50 !important; /* Farbe des aktiven Links auf Grün */
 }
 
 @media screen and (max-width: 768px) {

@@ -21,8 +21,26 @@ body {
     padding-right: 25px;
 }
 
+@keyframes navlinkColorChange {
+    0% {
+        color: #4CAF50;
+    }
+    25% {
+        color: blue;
+    }
+    33% {
+        color: red;
+    }
+    66% {
+        color: yellow;
+    }
+    100% {
+        color: #4CAF50;
+    }
+}
+
 .nav-link.active {
-    color: #4CAF50 !important;
+    animation: navlinkColorChange 2s linear forwards;
 }
 
 /* Header Section */

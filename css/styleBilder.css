@@ -18,6 +18,28 @@ body {
     transform: translateX(-50%);
 }
 
+@keyframes navlinkColorChange {
+    0% {
+        color: #4CAF50;
+    }
+    25% {
+        color: blue;
+    }
+    33% {
+        color: red;
+    }
+    66% {
+        color: yellow;
+    }
+    100% {
+        color: #4CAF50;
+    }
+}
+
+.nav-link.active {
+    animation: navlinkColorChange 2s linear forwards;
+}
+
 
 .gallery-section {
     padding: 50px;
@@ -156,10 +178,6 @@ body {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.nav-link.active {
-    color: #4CAF50 !important; /* Farbe des aktiven Links auf Grün */
 }
 
 @media (max-width: 768px) {
