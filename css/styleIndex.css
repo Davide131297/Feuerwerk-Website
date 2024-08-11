@@ -53,6 +53,10 @@ body {
     border-radius: 10px;
 }
 
+#arrow {
+    cursor: pointer;
+}
+
 /* Services Section */
 .services-section {
     padding: 30px;
