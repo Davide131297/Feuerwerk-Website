@@ -28,21 +28,27 @@ body {
 /* Header Section */
 .header-video {
     width: 100%;
-    height: calc(100vh - 56px);
+    height: 100vh;
     object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Volle Höhe des Bildschirms */
 }
 
 .header-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+    color: white; /* Stelle sicher, dass die Farbe sichtbar ist */
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    background-color: transparent;
+    padding-top: 500px;
+    padding-bottom: 500px;
     border-radius: 10px;
 }
 
@@ -50,13 +56,13 @@ body {
 .services-section {
     padding: 30px;
     padding-bottom: 80px;
-    background-color: #000000;
+    background-color: transparent;
 }
 
 .services-title {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: white;
 }
 
@@ -67,7 +73,7 @@ body {
 }
 
 .service-box {
-    background-color: white;
+    background-color: transparent;
     border: 1px solid #ddd;
     border-radius: 10px;
     width: 45%;
@@ -110,7 +116,7 @@ body {
 /* Why Us Section */
 .why-us-section {
     padding: 30px;
-    background-color: #000000;
+    background-color: transparent;
     text-align: center;
 }
 
@@ -125,7 +131,7 @@ body {
 .text-overlay {
     position: relative;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
     padding: 20px;
     border-radius: 10px;
     max-width: 90%;
@@ -134,7 +140,7 @@ body {
 .why-us-title {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: white;
 }
 
@@ -182,13 +188,13 @@ body {
 /* Process Section */
 .process-section {
     padding: 30px;
-    background-color: #000000;
+    background-color: transparent;
 }
 
 .process-title {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: white;
 }
 
