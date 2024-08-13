@@ -21,6 +21,26 @@ body {
     transform: translateX(-50%);
 }
 
+@keyframes colorChangeBrand {
+    0% {
+        fill: rgb(240, 226, 42);
+    }
+    50% {
+        fill: red;
+    }
+    100% {
+        fill: rgb(240, 226, 42);
+    }
+}
+
+#Brand {
+    animation: colorChangeBrand 2s infinite;
+}
+
+#Hintergrund {
+    fill: rgb(33, 37, 41);
+}
+
 .navbar-nav {
     padding-right: 25px;
 }
