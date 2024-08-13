@@ -56,15 +56,43 @@ body {
 
 .gallery-section {
     padding: 50px;
-    background-color: #f4f4f4;
     flex: 1;
+}
+
+.gallery-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 'auto';
+    object-fit: cover;
+    z-index: -1;
+}
+
+@keyframes colorChange {
+    0% {
+        color: red;
+    }
+    25% {
+        color: yellow;
+    }
+    50% {
+        color: rgb(54, 184, 54);
+    }
+    75% {
+        color: rgb(255, 255, 255);
+    }
+    100% {
+        color: red;
+    }
 }
 
 .gallery-title {
     text-align: center;
     font-size: 36px;
     margin-bottom: 40px;
-    color: #333;
+    z-index: 1;
+    animation: colorChange 5s infinite; /* Animation anwenden */
 }
 
 .gallery-container {
@@ -239,6 +267,11 @@ body {
     .gallery-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .gallery-background {
+        height: 100vh; /* Passt die Höhe an die volle Höhe des Viewports an */
+    }
+
     .gallery-item {
         width: 100%;
         height: auto;
