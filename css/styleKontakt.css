@@ -56,7 +56,7 @@ body {
 
 .container {
     color: white;
-    padding-top: calc(57px + 10px);
+    padding-top: calc(57px + 20px);
 }
 
 .centered-col {
@@ -180,6 +180,14 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .container {
+        padding-top: calc(57px + 35px);
+    }
+
+    .bottom-container {
+        padding-top: 30px;
     }
     
     input::placeholder {
