@@ -154,6 +154,20 @@
                 alert('Fehler beim Absenden des Formulars.');
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('basismodel')) {
+                const messageField = document.getElementById('exampleFormControlTextarea1');
+                messageField.value = "Guten Tag, ich kontaktiere Sie bezüglich dieses Paketes:\n\nBasis Edition Details\nDiese Edition bietet eine einfache, aber beeindruckende Show.\n\nHighlights:\nSehr großes Feuerwerkseinstieg\n5 Minuten Feuerwerk\nGrundlegende Effekte";
+            }   else if (urlParams.has('fortgeschritten')) {
+                const messageField = document.getElementById('exampleFormControlTextarea1');
+                messageField.value = "Guten Tag, ich kontaktiere Sie bezüglich dieses Pakets:\n\nFortgeschrittene Edition Details\nDiese Edition bietet eine erweiterte Show mit mehr Effekten.\n\nHighlights:\nDoppeltsoviel Feuerwerk, wie bei der Basis Edition\n5 Minuten Feuerwerk\nFortgeschrittene Effekte\nDas Fortgeschrittene Feuerwerk verschießt bei gleicher Länge (fünf Minuten) doppelt so viel Feuerwerk, wie die Basis Edition (979 €). Im Ergebnis entsteht ein Feuerwerk von dem Du und Deine Gäste noch Jahre schwärmen werdet.";
+            }   else if (urlParams.has('extraklasse')) {
+                const messageField = document.getElementById('exampleFormControlTextarea1');
+                messageField.value = "Guten Tag, ich kontaktiere Sie bezüglich dieses Pakets:\n\nExtraklasse Edition Details\nUnsere Premium Show bietet die eindrucksvollsten Effekte.\n\nHighlights:\nDas doppelte Feuerwerk, wie bei der fortgeschrittenen Edition\n5 Minuten Feuerwerk\nHochwertigste Effekte\nDas Feuerwerk Extraklasse verschießt bei gleicher Länge (fünf Minuten) doppelt so viel Feuerwerk, wie die fortgeschrittene Variante (1.599 €). Dieses Feuerwerk ist kaum noch durch Worte zu beschreiben und ist einfach überwältigend.";
+            }
+        });
     </script>
 </body>
 </html>
