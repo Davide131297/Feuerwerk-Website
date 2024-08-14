@@ -1,12 +1,10 @@
+/* Global Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f4f4f4;
 }
 
+/* Navbar */
 .navbar-center {
     display: flex;
     justify-content: center;
@@ -25,11 +23,6 @@ body {
 
 .navbar-nav {
     padding-right: 25px;
-}
-
-.icon {
-    margin-right: 5px;
-    font-size: 16px;
 }
 
 @keyframes navlinkColorChange {
@@ -56,33 +49,42 @@ body {
 
 .icon {
     margin-right: 5px;
+    font-size: 16px;
 }
 
-.about-section {
-    padding: 50px;
-    background-color: white;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+/* Price Body */
+
+.priceBody {
+    background-color: black;
+    color: white;
 }
 
-.about-title {
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: #333;
+.priceBody {
+    padding-top: 75px;
 }
 
-.about-content {
-    max-width: 800px;
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: justify;
+.preisKarte {
+    background-color: #212529;
+    border-radius: 15px;
 }
 
+.levelIcon {
+    width: 15px;
+    height: 15px;
+}
+
+.visibility2 {
+    opacity: 0.3;
+}
+
+.fa-solid{
+    padding-right: 5px;
+    font-size: 16px;
+}
+
+/* Footer */
 .footer {
-    background-color: #333;
+    background-color: #212529;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -101,31 +103,7 @@ body {
     text-decoration: underline;
 }
 
-/* Social Media Icons */
-
-#social-widget {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background-color: transparent;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #25D366; /* WhatsApp color */
-    border-radius: 50%;
-    cursor: pointer;
-}
-
+/* Media Queries */
 @media screen and (max-width: 768px) {
 
     .navbar-brand {
@@ -140,16 +118,14 @@ body {
         align-items: center;
     }
 
-    .footer {
-        flex-direction: column;
-        align-items: center;
+    .preisKarte {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
-    .footer p:last-child {
-        text-align: center;
-        margin-right: 0;
+    .priceBody {
+        padding-top: 100px;
     }
-    
 }
 
 @media screen and (max-width: 415px) {
