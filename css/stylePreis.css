@@ -2,6 +2,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-image: url("../img/fireworkBanner.jpg");
+    background-size: cover; /* Passt das Bild an, um den gesamten Hintergrund zu bedecken */
+    background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
 }
 
 /* Navbar */
@@ -55,12 +58,22 @@ body {
 /* Price Body */
 
 .priceBody {
-    background-color: black;
+    background-color: transparent;
     color: white;
+    padding-top: 75px;
 }
 
-.priceBody {
-    padding-top: 75px;
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: yellow; }
+    50% { color: blue; }
+    75% { color: green; }
+    100% { color: orange; }
+
+}
+
+.priceheaderTitle {
+    animation: colorChange 5s linear infinite;
 }
 
 .preisKarte {
@@ -82,12 +95,20 @@ body {
     font-size: 16px;
 }
 
+.btnIcon {
+    margin-right: 5px;
+    animation: colorChange 5s linear infinite;
+}
+
 /* Footer */
 .footer {
     background-color: #212529;
     color: white;
     text-align: center;
     padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer p {
@@ -125,6 +146,10 @@ body {
 
     .priceBody {
         padding-top: 100px;
+    }
+
+    .footer {
+        position: static;
     }
 }
 
