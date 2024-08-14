@@ -74,11 +74,20 @@ body {
 
 .priceheaderTitle {
     animation: colorChange 5s linear infinite;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.priceheadertext {
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .preisKarte {
     background-color: #212529;
     border-radius: 15px;
+}
+
+.priceBodyHeader {
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .levelIcon {
