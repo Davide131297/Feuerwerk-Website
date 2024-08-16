@@ -50,11 +50,13 @@
     <div class="about-section">
         <h2 class="about-title">Über mich</h2>
         <div class="about-content">
-            <p>Was einst als Hobby begann, hat sich zu einer wahren Leidenschaft entwickelt, die mich dazu brachte, Möckmühler Feuerwerke ins Leben zu rufen. Ich plane und zünde Feuerwerke für alle erdenklichen Festlichkeiten – von privaten Feiern und Hochzeiten bis hin zu großen öffentlichen Events. Auch für die Foto- und Filmindustrie stehe ich mit meinem Fachwissen zur Verfügung.</p>
-            <p>Was mich besonders macht? Ich mache alles allein. Es gibt kein Team hinter Möckmühler Feuerwerke – jeder Funke, jede Explosion und jede Show wird von mir persönlich geplant und ausgeführt. Dabei biete ich meine Dienstleistungen zum Selbstkostenpreis an, um die Freude an spektakulären Feuerwerken für jeden erschwinglich zu machen.</p>
-            <p>Sicherheit steht bei mir an erster Stelle. Jede meiner Feuerwerkskreationen wird mit größter Sorgfalt und unter Einhaltung der höchsten Sicherheitsstandards durchgeführt. Ich freue mich darauf, auch Ihre Veranstaltung mit einem unvergesslichen Feuerwerk zu bereichern.</p>
-            <p>Vielen Dank, dass Sie sich für Möckmühler Feuerwerke entschieden haben. Ich freue mich darauf, Ihre Visionen in die Realität umzusetzen!</p>
-        </div>
+            <p class="text-center">Was einst als Hobby begann, hat sich zu einer wahren Leidenschaft entwickelt, die mich dazu brachte, Möckmühler Feuerwerke ins Leben zu rufen.</p>
+            <p class="text-center">Ich plane und zünde Feuerwerke für alle erdenklichen Festlichkeiten – von privaten Feiern und Hochzeiten bis hin zu großen öffentlichen Events. Auch für die Foto- und Filmindustrie stehe ich mit meinem Fachwissen zur Verfügung.</p>
+            <p class="text-center">Was mich besonders macht? Ich mache alles allein. Es gibt kein Team hinter Möckmühler Feuerwerke – jeder Funke, jede Explosion und jede Show wird von mir persönlich geplant und ausgeführt.</p>
+            <p class="text-center">Dabei biete ich meine Dienstleistungen zum Selbstkostenpreis an, um die Freude an spektakulären Feuerwerken für jeden erschwinglich zu machen.</p>
+            <p class="text-center">Sicherheit steht bei mir an erster Stelle. Jede meiner Feuerwerkskreationen wird mit größter Sorgfalt und unter Einhaltung der höchsten Sicherheitsstandards durchgeführt. Ich freue mich darauf, auch Ihre Veranstaltung mit einem unvergesslichen Feuerwerk zu bereichern.</p>
+            <p class="text-center">Vielen Dank, dass Sie sich für Möckmühler Feuerwerke entschieden haben. Ich freue mich darauf, Ihre Visionen in die Realität umzusetzen!</p>
+        </div>        
     </div>
     <div class="footer">
         <p>&copy; 2024 möckmühler-feuerwerke.de Alle Rechte vorbehalten.</p>
@@ -71,5 +73,16 @@
             <img src="img/InstagramWidget.png" alt="Instagram-Icon" width="80" height="80">
         </div>
     </div>
+    <!-- Animation Script -->
+    <script>
+        var aboutContent = document.querySelector('.about-content');
+        var paragraphs = aboutContent.querySelectorAll('p');
+        var animationDelay = 200; // Verzögerung in Millisekunden
+
+        paragraphs.forEach((p, index) => {
+            p.style['animation-delay'] = animationDelay * index + 'ms';
+            p.style['animation'] = 'an 4s ease-out 1 both';
+        });
+    </script>
 </body>
 </html>
