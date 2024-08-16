@@ -128,7 +128,7 @@ body {
 }
 
 .footer {
-    background-color: #333;
+    background-color: #212529;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -282,9 +282,19 @@ body {
         align-items: center;
     }
 
+    .footer p:first-child {
+        margin-left: 2px;
+        margin-right: 2px;
+    }             
+
     .footer p:last-child {
         text-align: center;
         margin-right: 0;
+    }
+
+    #social-widget {
+        bottom: 20px;
+        right: 5px;
     }
 }
 @media screen and (max-width: 415px) {

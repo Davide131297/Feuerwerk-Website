@@ -155,10 +155,16 @@ body {
 
     .priceBody {
         padding-top: 100px;
+        margin-bottom: 10px;
     }
 
     .footer {
         position: static;
+    }
+
+    .footer p:first-child {
+        margin-left: 2px;
+        margin-right: 2px;
     }
 }
 
