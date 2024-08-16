@@ -95,7 +95,7 @@
     </div>
     <div class="container text-center bottom-container">
         <div class="row d-flex align-items-stretch">
-            <div class="col d-flex flex-column">
+            <div class="col d-flex flex-column formular">
                 <div class="formular-title">
                     <h3>Schreiben Sie mir eine Nachricht</h3>
                 </div>
@@ -113,6 +113,10 @@
                         <label>
                           <input type="checkbox" name="Datenverarbeitung bestätigt" value="Ja" required>
                         <span>Ich bin mit der Verarbeitung meiner Eingaben zum Zwecke der Anfragebearbeitung durch <a href="https://form.taxi/de" target="_blank" rel="noopener">Form.taxi</a> einverstanden.</span>                        </label>
+                    </div>
+                    <div class="mb-3 captcha">
+                        <label for="captcha">Bitte lösen Sie diese Aufgabe: <span id="captcha-question"></span></label>
+                        <input type="text" class="form-control" id="captcha" name="captcha" placeholder="Ihre Antwort" required/>
                     </div>
                     <button class="btn btn-outline-light" type="submit">Senden</button>
                 </form>
@@ -168,6 +172,24 @@
                 messageField.value = "Guten Tag, ich kontaktiere Sie bezüglich dieses Pakets:\n\nExtraklasse Edition Details\nUnsere Premium Show bietet die eindrucksvollsten Effekte.\n\nHighlights:\nDas doppelte Feuerwerk, wie bei der fortgeschrittenen Edition\n25 Minuten Feuerwerk\nBesonders laute Effekte\nNur die Hochwertigsten Effekte\nFinale besteht nur aus Großfeuerwerk\nGesamtes Feuerwerk besteht zu 90% aus Großfeuerwerkseffekten.\nDas Feuerwerk Extraklasse verschießt bei unfassbaren 25 Minuten 4-Mal so viel Feuerwerk, wie die fortgeschrittene Variante (1.250 €). Dieses Feuerwerk ist kaum noch durch Worte zu beschreiben und ist einfach überwältigend.";
             }
         });
+
+        function generateCaptcha() {
+            const num1 = Math.floor(Math.random() * 10);
+            const num2 = Math.floor(Math.random() * 10);
+            document.getElementById('captcha-question').innerText = `${num1} + ${num2} = ?`;
+            return num1 + num2;
+        }
+
+        const correctAnswer = generateCaptcha();
+
+        function validateCaptcha() {
+            const userAnswer = parseInt(document.getElementById('captcha').value);
+            if (userAnswer !== correctAnswer) {
+                alert('Falsche Antwort auf die Rechenaufgabe. Bitte versuchen Sie es erneut.');
+                return false;
+            }
+            return true;
+        }
     </script>
 </body>
 </html>

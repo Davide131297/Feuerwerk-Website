@@ -162,6 +162,10 @@ body {
     box-shadow: 0 0 0 0.15rem #4CAF50;
 }
 
+.captcha {
+    margin-top: 10px;
+}
+
 .map-container {
     width: 100%;
     max-width: 800px;
