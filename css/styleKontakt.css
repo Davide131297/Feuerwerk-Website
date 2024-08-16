@@ -170,12 +170,6 @@ body {
     border: 1px solid #ddd;
 }
 
-.g-recaptcha {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .footer {
     background-color: rgb(33, 37, 41);
     color: white;
