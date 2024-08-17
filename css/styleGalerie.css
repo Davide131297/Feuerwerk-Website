@@ -93,6 +93,7 @@ body {
     margin-bottom: 40px;
     z-index: 1;
     animation: colorChange 5s infinite; /* Animation anwenden */
+    text-shadow: 0px 1px 3px #ff0000; /* Weißer Schatten */
 }
 
 .gallery-container {
