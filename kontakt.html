@@ -147,6 +147,9 @@
         document.getElementById('ft-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Verhindert die Weiterleitung
 
+            if (!validateCaptcha()) {
+                return; // Beendet die Funktion, wenn das Captcha falsch ist
+            }
             // Hier kannst du die Formular-Daten manuell absenden
             var formData = new FormData(this);
 
@@ -156,6 +159,7 @@
             }).then(response => {
                 if (response.ok) {
                     alert('Formular erfolgreich abgesendet!');
+                    this.reset();
                 } else {
                     alert('Fehler beim Absenden des Formulars.');
                 }
