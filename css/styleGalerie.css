@@ -127,17 +127,44 @@ body {
     object-fit: cover;
 }
 
-.gallery-item.InstagramVideo video { /* Video-Elemente in der Klasse .InstagramVideo */
-    max-height: 215px; /* Beispielhöhe */
-    width: 100%;
-    height: auto;
-    background-color: black;
-}
-
 .lightbox-video {
     width: 100% !important; /* Passt die Breite des Videos an */
     height: auto !important; /* Beibehaltung des Seitenverhältnisses */
     max-height: 80vh !important; /* Maximale Höhe auf 90% der Viewport-Höhe begrenzen */
+}
+
+@keyframes trennlineColorChange {
+    0% {
+        background-color: #4CAF50;
+    }
+    25% {
+        background-color: blue;
+    }
+    33% {
+        background-color: red;
+    }
+    66% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: #4CAF50;
+    }
+}
+
+.trennlinie {
+    width: 90%; /* Sie können die Breite nach Bedarf anpassen */
+    height: 2px;
+    animation: trennlineColorChange 5s infinite; /* Farbe der Trennlinie */
+    margin: 20px auto; /* Zentriert die Trennlinie horizontal */
+}
+
+.instagram-container {
+    animation: colorChange 5s infinite; /* Animation anwenden */
+}
+
+.instagram-media {
+    transform: scale(0.8); /* Skaliere den Inhalt auf 80% der Originalgröße */
+    transform-origin: top left;
 }
 
 .footer {
