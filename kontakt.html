@@ -8,8 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styleKontakt.css">
-    <!--AwsomeFont-->
+    <!-- AwsomeFont -->
     <script src="https://kit.fontawesome.com/503b020798.js" crossorigin="anonymous"></script>
+    <style>
+        .body {
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -32,7 +37,7 @@
                             <a class="nav-link" href="galerie.html"><i class="fa-regular fa-image icon"></i>Galerie</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="preise.html"><i class="fa-solid fa-euro-sign icon"></i></i>Preise</a>
+                            <a class="nav-link" href="preise.html"><i class="fa-solid fa-euro-sign icon"></i>Preise</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="kontakt.html"><i class="fa-regular fa-envelope icon"></i>Kontakt</a>
@@ -45,7 +50,8 @@
             </div>
         </nav>
     </div>
-    <div class="container text-center">
+
+    <div class="container container-top text-center">
         <h3 class="contact-title">Kontaktieren Sie uns</h3>
         <div class="row">
             <div class="col centered-col">
@@ -93,12 +99,11 @@
             </div>
         </div>
     </div>
-    <div class="container text-center bottom-container">
-        <div class="row d-flex align-items-stretch">
-            <div class="col d-flex flex-column formular">
-                <div class="formular-title">
-                    <h3>Schreiben Sie mir eine Nachricht</h3>
-                </div>
+    
+    <div class="container container-custom container-bottom">
+        <div class="row justify-content-around">
+            <div class="col-12 col-md-4 px-3">
+                <h5 class="text-center">Schreiben Sie mir eine Nachricht</h5>
                 <form action="https://form.taxi/s/drwdqmsq" id="ft-form" method="POST" accept-charset="UTF-8">
                     <div class="mb-3">
                         <input type="text" class="form-control" id="exampleFormControlInput1" name="Name" placeholder="Ihr Name" required/>
@@ -111,8 +116,9 @@
                     </div>
                     <div>
                         <label>
-                          <input type="checkbox" name="Datenverarbeitung bestätigt" value="Ja" required>
-                        <span>Ich bin mit der Verarbeitung meiner Eingaben zum Zwecke der Anfragebearbeitung durch <a href="https://form.taxi/de" target="_blank" rel="noopener">Form.taxi</a> einverstanden.</span>                        </label>
+                            <input type="checkbox" name="Datenverarbeitung bestätigt" value="Ja" required>
+                            <span>Ich bin mit der Verarbeitung meiner Eingaben zum Zwecke der Anfragebearbeitung durch <a href="https://form.taxi/de" target="_blank" rel="noopener">Form.taxi</a> einverstanden.</span>
+                        </label>
                     </div>
                     <div class="mb-3 captcha">
                         <label for="captcha">Bitte lösen Sie diese Aufgabe: <span id="captcha-question"></span></label>
@@ -121,15 +127,15 @@
                     <button class="btn btn-outline-light" type="submit">Senden</button>
                 </form>
             </div>
-            <div class="col d-flex flex-column">
-                <h3>Standort</h3>
-                <div class="map-container mt-auto">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2636.8316524889297!2d9.35303731590483!3d49.31926777933561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47985c6c1a7ddbbd%3A0x44a0e1e37f4f1a4!2sPfarrsteige%209%2C%2074219%20M%C3%B6ckm%C3%BChl!5e0!3m2!1sen!2sde!4v1628252345678!5m2!1sen!2sde" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="col-12 col-md-4 px-3">
+                <h5 class="text-center">Standort</h5>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2636.8316524889297!2d9.35303731590483!3d49.31926777933561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47985c6c1a7ddbbd%3A0x44a0e1e37f4f1a4!2sPfarrsteige%209%2C%2074219%20M%C3%B6ckm%C3%BChl!5e0!3m2!1sen!2sde!4v1628252345678!5m2!1sen!2sde" height="100%" width="100%" loading="lazy"></iframe>
                 </div>
             </div>
-        </div>
+        </div>       
     </div>
-    
+
     <div class="footer">
         <p>&copy; möckmühler-feuerwerke.de Alle Rechte vorbehalten.</p>
         <p>
@@ -164,10 +170,10 @@
             if (urlParams.has('basismodel')) {
                 const messageField = document.getElementById('exampleFormControlTextarea1');
                 messageField.value = "Guten Tag, ich kontaktiere Sie bezüglich dieses Paketes:\n\nBasis Edition Details\nDiese Edition bietet eine einfache, aber beeindruckende Show. Perfekt für Geburtstage und weitere Festlichkeiten.\n\nHighlights:\nSehr großes Feuerwerkseinstieg\n15 Minuten Feuerwerk\nGrundlegende Effekte\nFinale besteht zum Teil aus Großfeuerwerk";
-            }   else if (urlParams.has('fortgeschritten')) {
+            } else if (urlParams.has('fortgeschritten')) {
                 const messageField = document.getElementById('exampleFormControlTextarea1');
                 messageField.value = "Guten Tag, ich kontaktiere Sie bezüglich dieses Pakets:\n\nFortgeschrittene Edition Details\nDiese Edition bietet eine erweiterte Show mit mehr Effekten. Das perfekte Feuerwerk führ ihre Firmenfeier!\n\nHighlights:\nDoppeltsoviel Feuerwerk, wie bei der Basis Edition\n19 Minuten Feuerwerk\nFortgeschrittene Effekte\nFinale besteht nur aus Großfeuerwerk\nDas Fortgeschrittene Feuerwerk verschießt bei einer länge von 19 Minuten doppelt so viel Feuerwerk, wie die Basis Edition (625 €). Im Ergebnis entsteht ein Feuerwerk von dem Du und Deine Gäste noch Jahre schwärmen werdet.";
-            }   else if (urlParams.has('extraklasse')) {
+            } else if (urlParams.has('extraklasse')) {
                 const messageField = document.getElementById('exampleFormControlTextarea1');
                 messageField.value = "Guten Tag, ich kontaktiere Sie bezüglich dieses Pakets:\n\nExtraklasse Edition Details\nUnsere Premium Show bietet die eindrucksvollsten Effekte.\n\nHighlights:\nDas doppelte Feuerwerk, wie bei der fortgeschrittenen Edition\n25 Minuten Feuerwerk\nBesonders laute Effekte\nNur die Hochwertigsten Effekte\nFinale besteht nur aus Großfeuerwerk\nGesamtes Feuerwerk besteht zu 90% aus Großfeuerwerkseffekten.\nDas Feuerwerk Extraklasse verschießt bei unfassbaren 25 Minuten 4-Mal so viel Feuerwerk, wie die fortgeschrittene Variante (1.250 €). Dieses Feuerwerk ist kaum noch durch Worte zu beschreiben und ist einfach überwältigend.";
             }

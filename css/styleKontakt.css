@@ -78,7 +78,7 @@ body {
 
 /* Neues CSS */
 
-.container {
+.container-top {
     color: white;
     padding-top: calc(57px + 20px);
 }
@@ -88,11 +88,6 @@ body {
     justify-content: center; /* Zentriert horizontal */
     align-items: center; /* Zentriert vertikal */
     height: 100%; /* Stellt sicher, dass das Eltern-Element die volle Höhe hat */
-}
-
-.contact-title {
-    text-align: center;
-    margin-bottom: 25px;
 }
 
 .card {
@@ -149,8 +144,10 @@ body {
     white-space: nowrap; /* Kein Zeilenumbruch */
 }
 
-.bottom-container {
+.container-bottom {
+    color: white;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .fromular-title {
@@ -180,7 +177,7 @@ body {
     text-align: center;
     padding: 10px 0;
     bottom: 0;
-    position: fixed;
+    position: relative; /* Ändern Sie dies von fixed zu relative */
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -214,12 +211,8 @@ body {
         align-items: center;
     }
 
-    .container {
-        padding-top: calc(57px + 35px);
-    }
-
-    .bottom-container {
-        padding-top: 30px;
+    .container-top {
+        padding-top: 90px;
     }
     
     input::placeholder {
