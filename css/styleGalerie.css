@@ -113,7 +113,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px; /* Bildgröße Desktop */
+    height: 40vh; /* Bildgröße Desktop */
+    width: 40vh;
 }
 
 .gallery-item:hover {
