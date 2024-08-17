@@ -169,6 +169,12 @@ body {
     transform-origin: top left;
 }
 
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer {
     background-color: #212529;
     color: white;
