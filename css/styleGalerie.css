@@ -113,7 +113,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: auto;
+    height: 200px; /* Bildgröße Desktop */
 }
 
 .gallery-item:hover {
@@ -164,7 +164,7 @@ body {
 }
 
 .instagram-media {
-    transform: scale(0.8); /* Skaliere den Inhalt auf 80% der Originalgröße */
+    transform: scale(1.0); /* Skaliere den Inhalt auf 80% der Originalgröße */
     transform-origin: top left;
 }
 
@@ -314,7 +314,7 @@ body {
     }
 
     .gallery-item {
-        width: 100%;
+        width: 22vh; /* Bildgröße Mobile */
         height: auto;
     }
 
