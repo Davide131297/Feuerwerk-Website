@@ -1,10 +1,16 @@
 /* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url("../img/fireworkBanner.jpg");
     background-size: cover; /* Passt das Bild an, um den gesamten Hintergrund zu bedecken */
     background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
+    background-attachment: fixed; /* Hält das Hintergrundbild fixiert */
 }
 
 /* Navbar */
