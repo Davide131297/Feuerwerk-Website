@@ -127,6 +127,19 @@ body {
     object-fit: cover;
 }
 
+.gallery-item.InstagramVideo video { /* Video-Elemente in der Klasse .InstagramVideo */
+    max-height: 215px; /* Beispielhöhe */
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+
+.lightbox-video {
+    width: 100% !important; /* Passt die Breite des Videos an */
+    height: auto !important; /* Beibehaltung des Seitenverhältnisses */
+    max-height: 80vh !important; /* Maximale Höhe auf 90% der Viewport-Höhe begrenzen */
+}
+
 .footer {
     background-color: #212529;
     color: white;

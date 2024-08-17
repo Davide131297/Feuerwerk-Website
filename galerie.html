@@ -64,9 +64,9 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <div class="gallery-item">
-                <video controls controlsList="nodownload" poster="img/poster/VideoThumbnail.png" class="lightbox-trigger">
-                    <source src="img/feuerwerk1.mp4" type="video/mp4">
+            <div class="gallery-item InstagramVideo">
+                <video controls controlsList="nodownload" poster="/img/poster/Instagram_Video_Poster.png" class="lightbox-trigger">
+                    <source src="img/InstagramVideo.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -83,14 +83,14 @@
                 <img src="img/bday.jpg" alt="Feuerwerk 2">
             </div>
             <div class="mySlides">
-                <video controls controlsList="nodownload" poster="img/video1_poster.jpg" autoplay>
+                <video controls controlsList="nodownload" poster="img/video1_poster.jpg">
                     <source src="img/feuerwerk1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="mySlides">
-                <video controls controlsList="nodownload" poster="img/video2_poster.jpg" autoplay>
-                    <source src="img/feuerwerk1.mp4" type="video/mp4">
+                <video class="lightbox-video" controls controlsList="nodownload" poster="img/poster/Instagram_Video_Poster_Lightbox.png">
+                    <source src="img/InstagramVideo.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -127,6 +127,14 @@
 
         function closeLightbox() {
             document.getElementById('lightbox').style.display = 'none';
+            stopAllVideos(); //Stoppt alle Videos in der Lightbox
+        }
+
+        function stopAllVideos() {
+            var videos = document.querySelectorAll('.mySlides video');
+            videos.forEach(function(video) {
+                video.pause();
+            });
         }
 
         function plusSlides(n) {
