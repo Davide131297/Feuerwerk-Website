@@ -235,6 +235,36 @@ body {
 .process-content {
     max-width: 600px;
     color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.process-content li {
+    margin-bottom: 5px;
+}
+
+/*Schriftfarben*/
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.blueviolet {
+    color: blueviolet;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.aqua {
+    color: aqua;
 }
 
 /* Color Changing Animation */

@@ -115,6 +115,14 @@ body {
     animation: colorChange 5s linear infinite;
 }
 
+#red {
+    color: red;
+}
+
+.blau {
+    color: blue;
+}
+
 /* Footer */
 .footer {
     background-color: #212529;
@@ -162,6 +170,12 @@ body {
     .priceBody {
         padding-top: 100px;
         margin-bottom: 10px;
+    }
+
+
+    .text-bottom {
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     .footer {
